@@ -1,0 +1,1 @@
+GET http://localhost:3000/contacts #The request above returns a json object with all family members for Luis Estigarribia. Database is connected.
