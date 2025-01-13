@@ -28,7 +28,7 @@ const getSingle = async (req, res, next) => {
             .getDatabase()
             .db()
             .collection('contacts')
-            .findOne({ _id: objectId });
+            .find({ _id: objectId });
 
         if (!contact) {
             return res.status(404).json({ error: 'Contact not found' });
