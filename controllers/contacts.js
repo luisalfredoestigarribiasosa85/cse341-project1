@@ -14,7 +14,7 @@ const getAll = async (req, res) => {
 };
 
 
-const getSingle = async (req, res, next) => {
+const getSingle = async (req, res) => {
     const id = req.params.id;
 
     if (!ObjectId.isValid(id)) {
@@ -27,7 +27,7 @@ const getSingle = async (req, res, next) => {
             .getDatabase()
             .db()
             .collection('contacts')
-            .find({ _id: objectId });
+            .findOne({ _id: objectId });
 
         if (!contact) {
             return res.status(404).json({ error: 'Contact not found' });
