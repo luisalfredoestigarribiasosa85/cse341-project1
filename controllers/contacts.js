@@ -51,7 +51,7 @@ const createContact = async (req, res) => {
     try {
         const result = await mongodb.getDatabase().db().collection('contacts').insertOne(contact);
         if (result.acknowledged) {
-            res.status(201).send();
+            res.status(201).send('Contact created');
         }
 
     } catch (error) {
@@ -77,7 +77,7 @@ const updateContact = (req, res) => {
     try {
         const result = mongodb.getDatabase().db().collection('contacts').updateOne(query, updateDoc, options);
         if (result.modifiedCount > 0) {
-            res.status(201).send();
+            res.status(201).send('Contact Updated');
         }
     } catch (error) {
         res.status(500).json({ error: 'Failed to update contact' });
@@ -91,7 +91,7 @@ const deleteContact = (req, res) => {
     try {
         const result = mongodb.getDatabase().db().collection('contacts').deleteOne(query);
         if (result.deletedCount > 0) {
-            res.status(201).send();
+            res.status(201).send('Contact Deleted');
         }
     } catch (error) {
         res.status(500).json({ error: 'Failed to delete contact' });
