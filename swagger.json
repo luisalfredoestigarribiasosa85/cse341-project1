@@ -8,8 +8,7 @@
   "host": "https://cse341-project1-13qq.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "https"
   ],
   "paths": {
     "/contacts": {
