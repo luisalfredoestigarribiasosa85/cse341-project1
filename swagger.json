@@ -5,10 +5,11 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "cse341-project1-13qq.onrender.com",
+  "host": "https://cse341-project1-13qq.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
     "/contacts": {
@@ -57,6 +58,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -130,6 +134,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"

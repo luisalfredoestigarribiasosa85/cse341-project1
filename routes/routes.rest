@@ -11,10 +11,10 @@ content-type: application/json
     "lastName": "Estigarribia Toledo",
     "email": "nkulas0@rediffmail.com",
     "favoriteColor": "red",
-    "birthday": "January 06"
+    "birthday": "November 09"
 }
 ### Delete a contact
-DELETE http://localhost:3000/contacts/678458d5166cc43d8a539a93
+DELETE http://localhost:3000/contacts/678458c6166cc43d8a539a91
 
 ### Create a contact
 POST http://localhost:3000/contacts
@@ -22,7 +22,7 @@ content-type: application/json
 
 {
     "firstName": "Angelo",
-    "lastName": "Estigarribia",
+    "lastName": "Esti",
     "email": "nkulas0@rediffmail.com",
     "favoriteColor": "gray",
     "birthday": "January 06"
